@@ -323,6 +323,12 @@ class ExcelDateFixerApp:
                                          corner_radius=20, fg_color="#5DADE2", hover_color="#3498DB")
         self.load_button.pack(side="left", padx=10)
 
+        self.exit_button = ctk.CTkButton(top, text = "✕ EXIT",
+                                         command = self.exit_app,
+                                         corner_radius = 20, fg_color="#E74C3C", hover_color= "#C0392B",
+                                         font=("Arial", 13, "bold"))
+        self.exit_button.pack(side="right",padx=10)
+
         self.files_notebook = ttk.Notebook(root)
         self.files_notebook.pack(expand=True, fill="both", padx=8, pady=6)
 
@@ -385,4 +391,5 @@ if __name__ == "__main__":
     root.geometry("1200x800")
     app = ExcelDateFixerApp(root)
     root.mainloop()
+
 
